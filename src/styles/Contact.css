@@ -1,0 +1,153 @@
+/* ContactPage.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  
+  .contact-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 85%;
+    max-width: 1200px;
+    margin-top: 40px;
+  }
+  
+  .info-section {
+    width: 45%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-section h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .info-section p {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .info-section h2 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+  }
+  
+  .info-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .info-section ul li {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+  
+  .contact-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-details, .booking-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .contact-details h2,
+  .booking-form h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .contact-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-details ul li {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details ul li strong {
+    color: #2980b9;
+  }
+  
+  .booking-form form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border 0.3s;
+  }
+  
+  input:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  button.submit-button {
+    background-color: #2980b9;
+    color: white;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.submit-button:hover {
+    background-color: #3498db;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-page-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .info-section, .contact-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

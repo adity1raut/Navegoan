@@ -1,0 +1,64 @@
+/* Homepage Container */
+.homepage-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  z-index: -1;
+  transition: transform 0.3s ease-out; /* Smooth transform */
+}
+
+.content-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content-text {
+  text-align: center; /* Center text */
+}
+
+.welcome-text {
+  color: #fbbf24; /* Tailwind yellow-400 */
+  font-size: 2.5rem; /* Adjusted for better readability */
+  font-weight: bold;
+}
+
+.explore-text {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 3rem; /* Adjusted size for responsive scaling */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 2rem; /* Slightly smaller for mobile */
+  }
+
+  .explore-text {
+    font-size: 2.5rem; /* Adjusted for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 1.75rem; /* Further reduced for smaller devices */
+  }
+
+  .explore-text {
+    font-size: 2rem; /* Further adjusted for smaller devices */
+  }
+}

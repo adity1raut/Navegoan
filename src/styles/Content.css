@@ -1,0 +1,107 @@
+/* General Container Styles */
+.content-container {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.4) inset;
+  min-height: 100vh; /* Adjusted for better responsiveness */
+}
+
+.content-main {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Flexbox for Layout */
+.content-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem; /* Adjusted for spacing */
+}
+
+/* Image Section */
+.content-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.image {
+  border-radius: 50%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  height: 250px; /* Adjust for responsiveness */
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content-image:hover .image {
+  transform: scale(1.05); /* Zoom in the image on hover */
+}
+
+/* Text Section */
+.content-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+.content-title {
+  font-weight: 900;
+  font-size: 2rem; /* Adjusted font size for smaller screens */
+  color: #000000;
+}
+
+.content-description {
+  margin-top: 1rem;
+  font-size: 1rem; /* Adjusted font size for responsiveness */
+  color: #ff0000;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.list {
+  margin-top: 1rem;
+  list-style: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .content-flex {
+    flex-direction: row;
+    text-align: left;
+    gap: 3rem; /* Increased spacing between elements */
+  }
+
+  .content-text {
+    text-align: left;
+  }
+
+  .image {
+    height: 350px; /* Adjusted for larger screens */
+    width: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-title {
+    font-size: 2.5rem; /* Increased font size for larger screens */
+  }
+
+  .content-description {
+    font-size: 1.25rem; /* Adjusted for better readability */
+  }
+
+  .image {
+    height: 450px;
+    width: 450px;
+  }
+}
