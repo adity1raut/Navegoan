@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom"; // Import NavLink
 import "../styles/Navbar.css";
-import image from "../assets/logo.png"
-
+import image from "../assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -45,14 +49,56 @@ export default function Navbar() {
           </svg>
         </button>
 
+        {/* Menu Links */}
         <div className={`menu-links ${isOpen ? "active" : ""}`}>
-          <a href="#home" className="menu-link">Home</a>
-          <a href="#about" className="menu-link">About</a>
-          <a href="#animals" className="menu-link">Animals</a>
-          <a href="#services" className="menu-link">Services</a>
-          <a href="#contact" className="menu-link">Contact</a>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `menu-link ${isActive ? "active" : ""}`
+            }
+            onClick={closeMenu}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `menu-link ${isActive ? "active" : ""}`
+            }
+            onClick={closeMenu}
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/hotels"
+            className={({ isActive }) =>
+              `menu-link ${isActive ? "active" : ""}`
+            }
+            onClick={closeMenu}
+          >
+            Hotels
+          </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              `menu-link ${isActive ? "active" : ""}`
+            }
+            onClick={closeMenu}
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `menu-link ${isActive ? "active" : ""}`
+            }
+            onClick={closeMenu}
+          >
+            Contact
+          </NavLink>
         </div>
 
+        {/* Contact Info and Book Now Button */}
         <div className="contact-info">
           <div className="contact-email">
             <span className="email-text">contact@example.com</span>

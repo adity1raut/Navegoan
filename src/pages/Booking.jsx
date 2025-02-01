@@ -29,7 +29,7 @@ const Booking = () => {
   const today = new Date().toISOString().split('T')[0];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center pt-14 justify-center">
       <div className="bg-gray-100 py-8 w-full">
         <h1 className="text-center text-4xl font-bold mb-8">Trip Packages</h1>
         <div className="flex justify-center gap-8 mb-8">

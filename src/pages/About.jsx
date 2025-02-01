@@ -1,9 +1,9 @@
 import React from 'react';
-import './AboutPage.css';  // Assuming you will have a separate CSS for styling.
+import "../styles/About.css"
 
 const AboutPage = () => {
   return (
-    <div className="about-container">
+    <div className="about-container mt-24 pb-8">
       <header className="about-header">
         <h1>Welcome to [National Park Name]</h1>
         <p>Discover the untamed beauty of nature and protect our planet's future.</p>

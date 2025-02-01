@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
-import "../styles/Contact.css"
+import "../styles/Contact.css";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    tripDate: '',
-    numberOfPeople: 1,
-    tripType: 'day-trip',
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmitBookingForm = (e) => {
+  const handleSubmitContactForm = (e) => {
     e.preventDefault();
-    console.log('Booking Form Data:', formData);
+    console.log('Contact Form Data:', formData);
+    // Add logic to submit the form data to a backend or email service
   };
 
   return (
-    <div className="contact-page-container">
+    <div className="contact-page-container pt-16">
       {/* Information Section */}
       <div className="info-section">
         <h1>Explore Our National Park</h1>
@@ -34,7 +36,6 @@ const ContactPage = () => {
         </ul>
       </div>
 
-
       <div className="contact-section">
         <div className="contact-details">
           <h2>Contact Information</h2>
@@ -47,56 +48,67 @@ const ContactPage = () => {
           <p>Open every day from 7:00 AM to 6:00 PM</p>
         </div>
 
-    
         <div className="booking-form">
-          <h2>Book Your Trip</h2>
-          <form onSubmit={handleSubmitBookingForm}>
+          <h2>Contact Us</h2>
+          <form onSubmit={handleSubmitContactForm}>
             <div className="form-group">
-              <label htmlFor="tripDate">Trip Date</label>
+              <label htmlFor="name">Name</label>
               <input
-                type="date"
-                id="tripDate"
-                name="tripDate"
-                value={formData.tripDate}
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
+                placeholder="Enter your name"
                 required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="numberOfPeople">Number of People</label>
+              <label htmlFor="email">Email</label>
               <input
-                type="number"
-                id="numberOfPeople"
-                name="numberOfPeople"
-                value={formData.numberOfPeople}
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
                 onChange={handleChange}
-                min="1"
+                placeholder="Enter your email"
                 required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="tripType">Type of Trip</label>
-              <select
-                id="tripType"
-                name="tripType"
-                value={formData.tripType}
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
                 onChange={handleChange}
+                placeholder="Enter the subject"
                 required
-              >
-                <option value="day-trip">Day Trip</option>
-                <option value="camping">Camping</option>
-                <option value="guided-tour">Guided Tour</option>
-              </select>
+              />
             </div>
 
-            <button type="submit" className="submit-button">Book Now</button>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Enter your message"
+                rows="5"
+                required
+              />
+            </div>
+
+            <button type="submit" className="submit-button">Send Message</button>
           </form>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default ContactPage;

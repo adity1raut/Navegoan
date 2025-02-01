@@ -1,23 +1,29 @@
-import React from 'react'
-import Homepage from "./pages/Homepage"
-import Navbar from "./components/Navbar"
-import Content from "./components/Content"
-import MainGallery from "./components/MainGallery"
-import Map from "./components/Map"
-import Footer from "./components/Fotter"
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Fotter";
+import Contact from "./pages/Contact";
+import Hotels from "./pages/Hotels";
+import Booking from "./pages/Booking";
+import About from "./pages/About";
+import Combo from "./Combo";
+
 function App() {
   return (
-    <>
-      <div className='min-h-screen'>
+    <BrowserRouter>
+      <div className="min-h-screen">
         <Navbar />
-        <Homepage />
-        <Content />
-        <MainGallery />
-        <Map />
+        <Routes>
+          <Route path="/" element={<Combo />} /> {/* Home Page */}
+          <Route path="/about" element={<About />} /> {/* About Page */}
+          <Route path="/hotels" element={<Hotels />} /> {/* Hotels Page */}
+          <Route path="/booking" element={<Booking />} /> {/* Booking Page */}
+          <Route path="/contact" element={<Contact />} /> {/* Contact Page */}
+        </Routes>
         <Footer />
       </div>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
