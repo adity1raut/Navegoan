@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom"; // Import NavLink
-import "../styles/Navbar.css";
 import image from "../assets/logo.png";
 
 export default function Navbar() {
@@ -102,7 +101,7 @@ export default function Navbar() {
           <div className="contact-email">
             <span className="email-text">contact@example.com</span>
           </div>
-          <button className="book-now-button">Book Now</button>
+          <NavLink to="/booking"><button className="book-now-button" >Book Now</button> </NavLink>
         </div>
       </div>
     </nav>
