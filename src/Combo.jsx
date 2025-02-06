@@ -6,7 +6,7 @@ import Map from './components/Map'
 function Combo() {
   return (
     <div>
-       <Homepage />
+        <Homepage />
         <Content />
         <MainGallery />
         <Map />

@@ -14,11 +14,11 @@ function App() {
       <div className="min-h-screen">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Combo />} /> {/* Home Page */}
-          <Route path="/about" element={<About />} /> {/* About Page */}
-          <Route path="/hotels" element={<Hotels />} /> {/* Hotels Page */}
-          <Route path="/booking" element={<Booking />} /> {/* Booking Page */}
-          <Route path="/contact" element={<Contact />} /> {/* Contact Page */}
+          <Route path="/" element={<Combo />} /> 
+          <Route path="/about" element={<About />} /> 
+          <Route path="/hotels" element={<Hotels />} /> 
+          <Route path="/booking" element={<Booking />} /> 
+          <Route path="/contact" element={<Contact />} /> 
         </Routes>
         <Footer />
       </div>

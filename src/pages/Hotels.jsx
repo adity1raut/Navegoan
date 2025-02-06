@@ -5,7 +5,7 @@ import image3 from "../mainGallery/image3.webp";
 import image4 from "../mainGallery/image4.webp";
 import image5 from "../mainGallery/image5.webp";
 
-const ImageGallery = () => {
+const Hotel = () => {
   const galleryItems = [
     {
       src: image1,
@@ -66,15 +66,15 @@ const ImageGallery = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 py-12">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">Hotel Gallery</h1>
-      <div className="flex w-full max-w-5xl space-x-8">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 py-12 px-4">
+      <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">Hotel Gallery</h1>
+      <div className="flex flex-col lg:flex-row w-full max-w-5xl space-y-8 lg:space-y-0 lg:space-x-8">
         {/* Image Section */}
-        <div className="relative w-2/3">
+        <div className="relative w-full lg:w-2/3">
           <img
             src={galleryItems[currentIndex].src}
             alt={galleryItems[currentIndex].alt}
-            className="w-full h-96 object-cover rounded-lg shadow-lg"
+            className="w-full h-64 sm:h-96 object-cover rounded-lg shadow-lg"
           />
           {/* Navigation Buttons */}
           <button
@@ -92,7 +92,7 @@ const ImageGallery = () => {
         </div>
 
         {/* Hotel Details Section */}
-        <div className="w-1/3 bg-white p-6 rounded-lg shadow-md">
+        <div className="w-full lg:w-1/3 bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-4">{galleryItems[currentIndex].name}</h2>
           <p className="text-gray-600 mb-4">{galleryItems[currentIndex].description}</p>
           <div className="flex items-center mb-4">
@@ -116,13 +116,13 @@ const ImageGallery = () => {
       </div>
 
       {/* Thumbnails */}
-      <div className="flex space-x-4 mt-6">
+      <div className="flex overflow-x-auto space-x-4 mt-6 pb-4">
         {galleryItems.map((item, index) => (
           <img
             key={index}
             src={item.src}
             alt={item.alt}
-            className={`w-16 h-16 object-cover rounded-lg cursor-pointer ${
+            className={`w-16 h-16 object-cover rounded-lg cursor-pointer flex-shrink-0 ${
               index === currentIndex ? "border-4 border-blue-500" : "opacity-50"
             }`}
             onClick={() => setCurrentIndex(index)}
@@ -155,4 +155,4 @@ const ImageGallery = () => {
   );
 };
 
-export default ImageGallery;
+export default Hotel;
