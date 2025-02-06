@@ -34,12 +34,28 @@
   color: #fbbf24; /* Tailwind yellow-400 */
   font-size: 2.5rem; /* Adjusted for better readability */
   font-weight: bold;
+  animation: fadeInUp 1.5s ease-out forwards; /* Fade-in and slide-up animation */
+  opacity: 0; /* Start invisible */
 }
 
 .explore-text {
   font-weight: bold;
   color: rgb(255, 255, 255);
   font-size: 3rem; /* Adjusted size for responsive scaling */
+  animation: fadeInUp 2s ease-out 0.5s forwards; /* Delayed fade-in and slide-up animation */
+  opacity: 0; /* Start invisible */
+}
+
+/* Keyframes for Fade-In and Slide-Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start 20px below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
 }
 
 /* Responsive Styles */
