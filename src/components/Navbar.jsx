@@ -26,7 +26,6 @@ export default function Navbar() {
           />
         </div>
 
-        {/* Mobile Menu Toggle Button */}
         <button
           onClick={toggleMenu}
           className="menu-toggle"

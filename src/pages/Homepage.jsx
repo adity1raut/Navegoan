@@ -21,8 +21,8 @@ const Homepage = () => {
       ></div>
       <div className="content-overlay">
         <div className="content-text">
-          <h2 className="welcome-text">Welcome to Nawegaon/Bandh</h2>
-          <h2 className="explore-text">EXPLORE & DISCOVER, TRAVEL</h2>
+          <h1 className="welcome-text">Welcome to Nawegaon/Bandh</h1>
+          <h1 className="explore-text">EXPLORE & DISCOVER, TRAVEL</h1>
         </div>
       </div>
     </div>

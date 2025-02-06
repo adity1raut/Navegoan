@@ -1,51 +1,69 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import image from "../assets/logo.png";
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-6 flex flex-col items-center w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left max-w-5xl w-full mx-auto px-4">
-          <div className="mb-4">
-            <h2 className="text-xl font-bold mb-2">
-              <img src={image} alt="Website Logo" className=" h-16 mx-auto md:mx-0" />
-            </h2>
-            <p>
-              This website hopes to keep people informed about the current state of India.
-            </p>
-          </div>
+      <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-12 w-full">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            {/* Logo and Description */}
+            <div className="mb-6 md:mb-0 flex flex-col items-center md:items-start">
+              <img src={image} alt="Website Logo" className="h-16 mb-4" />
+              <p className="text-gray-400 text-sm">
+                This website aims to keep people informed about the current state of India.
+              </p>
+            </div>
 
-          <div className="mb-4">
-            <h2 className="text-xl font-bold mb-2">Links</h2>
-            <ul className="space-y-2">
-              <li><a href="#home" className="text-white hover:underline">Home</a></li>
-              <li><a href="#about" className="text-white hover:underline">About</a></li>
-              <li><a href="#services" className="text-white hover:underline">Services</a></li>
-              <li><a href="#contact" className="text-white hover:underline">Contact</a></li>
-            </ul>
-          </div>
+            {/* Quick Links */}
+            <div className="mb-6 md:mb-0 flex flex-col items-center md:items-start">
+              <h1 className="text-xl font-bold mb-4">Quick Links</h1>
+              <ul className="space-y-2 list-none">
+                <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a></li>
+                <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              </ul>
+            </div>
 
-          <div className="mb-4">
-            <h2 className="text-xl font-bold mb-2">Contact Us</h2>
-            <p>Email: <a href="mailto:info@nawegaonnationalpark.com" className="text-white hover:underline">info@nawegaonnationalpark.com</a></p>
-            <p>Phone: <a href="tel:+911234567890" className="text-white hover:underline">+91 12345 67890</a></p>
-            <div className="flex justify-center md:justify-start space-x-4 mt-2">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white text-2xl transition-colors hover:text-blue-500">
-                <FaFacebook />
-              </a>
-              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-white text-2xl transition-colors hover:text-blue-400">
-                <FaTwitter />
-              </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white text-2xl transition-colors hover:text-pink-500">
-                <FaInstagram />
-              </a>
+            {/* Contact Information */}
+            <div className="mb-6 md:mb-0 flex flex-col items-center md:items-start">
+              <h1 className="text-xl font-bold mb-4">Contact Us</h1>
+              <p className="text-gray-400 text-sm mb-2">
+                Email: <a href="mailto:info@nawegaonnationalpark.com" className="text-white hover:underline">info@nawegaonnationalpark.com</a>
+              </p>
+              <p className="text-gray-400 text-sm">
+                Phone: <a href="tel:+911234567890" className="text-white hover:underline">+91 12345 67890</a>
+              </p>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="mb-6 md:mb-0 flex flex-col items-center md:items-start">
+              <h1 className="text-xl font-bold mb-4">Follow Us</h1>
+              <div className="flex space-x-4">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+                  <FaFacebook size={24} />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  <FaTwitter size={24} />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
+                  <FaInstagram size={24} />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
+                  <FaLinkedin size={24} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </footer>
-      <div className="h-20 flex items-center justify-center text-wheat bg-gradient-to-r from-gray-900 via-gray-800 to-black">
-        <h1>@ Navega Bhandh @gmailasfdkanasdkasdvnk</h1>
+
+      <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-gray-400 py-4 text-center">
+        <p className="text-sm">
+          &copy; {new Date().getFullYear()} Navega Bhandh. All rights reserved.
+        </p>
       </div>
     </>
   );
