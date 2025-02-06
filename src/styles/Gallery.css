@@ -1,16 +1,20 @@
-
-
+/* Define the scroll animation */
 @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-50% - 1rem));
-    }
+  0% {
+    transform: translateX(0);
   }
-  
-  .animate-scroll {
-    animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  100% {
+    transform: translateX(-100%);
   }
-  
- 
+}
+
+/* Apply the animation to the gallery */
+.animate-scroll {
+  animation: scroll 20s linear infinite; /* Adjust the duration as needed */
+  white-space: nowrap; /* Prevent wrapping of items */
+}
+
+/* Pause the animation on hover */
+.hover\:pause:hover {
+  animation-play-state: paused;
+}
