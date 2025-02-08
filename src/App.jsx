@@ -8,6 +8,7 @@ import Booking from "./pages/Booking";
 import About from "./pages/About";
 import Combo from "./Combo";
 import AnimalInfo from "./components/AnimalInfo";
+import AnimalDetails from "./components/AnimalDetails";
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/booking" element={<Booking />} /> 
           <Route path="/contact" element={<Contact />} /> 
           <Route path="/animal" element ={<AnimalInfo />}/>
+          <Route path="/animal-details" element={<AnimalDetails/>} /> 
         </Routes>
         <Footer />
       </div>
