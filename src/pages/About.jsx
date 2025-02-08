@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import tiger from "../assets/pexels-pixabay-39857.jpg"
 
 const AboutPage = () => {
   // Animation variants
@@ -21,7 +22,7 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6 lg:px-8 pt-28">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
+  
         <motion.header
           initial="hidden"
           whileInView="visible"
@@ -29,7 +30,7 @@ const AboutPage = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl font-bold text-gray-800">Welcome to [National Park Name]</h1>
+          <h1 className="text-4xl font-bold text-gray-800">Welcome to Navegoan Bandh National Park</h1>
           <p className="mt-4 text-lg text-gray-600">
             Discover the untamed beauty of nature and protect our planet's future.
           </p>
@@ -46,7 +47,7 @@ const AboutPage = () => {
             className="flex items-center justify-center"
           >
             <img
-              src="https://via.placeholder.com/600x400" // Replace with your image URL
+              src={tiger} // Replace with your image URL
               alt="National Park"
               className="rounded-lg shadow-lg w-full h-auto"
             />

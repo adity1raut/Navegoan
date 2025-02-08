@@ -7,6 +7,8 @@ import Hotels from "./pages/Hotels";
 import Booking from "./pages/Booking";
 import About from "./pages/About";
 import Combo from "./Combo";
+import AnimalInfo from "./components/AnimalInfo";
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
           <Route path="/hotels" element={<Hotels />} /> 
           <Route path="/booking" element={<Booking />} /> 
           <Route path="/contact" element={<Contact />} /> 
+          <Route path="/animal" element ={<AnimalInfo />}/>
         </Routes>
         <Footer />
       </div>

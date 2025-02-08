@@ -66,8 +66,8 @@ const Hotel = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 py-12 px-4">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">Hotel Gallery</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 py-12 px-4 pt-28">
+      {/* <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">Hotel Gallery</h1> */}
       <div className="flex flex-col lg:flex-row w-full max-w-5xl space-y-8 lg:space-y-0 lg:space-x-8">
         {/* Image Section */}
         <div className="relative w-full lg:w-2/3">
@@ -104,8 +104,6 @@ const Hotel = () => {
               <li key={index}>{amenity}</li>
             ))}
           </ul>
-
-          {/* Book Now Button */}
           <button
             onClick={handleBookNow}
             className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500 transition duration-300"
